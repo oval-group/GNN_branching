@@ -5,6 +5,9 @@ cpus_total=1
 # absolute cpu number (cpu index on the machine, based on htop command)
 cpu_abs=0
 # the relative task number, ranging from 0 to $cpus_total-1
+# Basically, we split the input pandas table into $cpus_total-1 parts and task_no is the index of a chosen part, 
+# the properties of which will be verified. 
+# This is mainly used for running several python scripts concurrently.
 task_no=0
 
 # base model
