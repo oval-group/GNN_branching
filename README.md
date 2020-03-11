@@ -17,7 +17,7 @@ from [here](http://www.gurobi.com/academia/for-universities).
 We recommend installing everything into a virtual environment.
 
 ```bash
-git clone --recursive https://github.com/oval-group/GNN_branching.git
+git clone --recursive http://github.com/oval-group/GNN_branching
 
 cd GNN_branching
 virtualenv -p python3.6 ./gnn
