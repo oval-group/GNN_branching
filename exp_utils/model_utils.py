@@ -231,7 +231,7 @@ def load_cifar_1to1_exp(model, idx, test = None, cifar_test = None):
         import torchvision.transforms as transforms
         normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
                                          std=[0.225, 0.225, 0.225])
-        cifar_test = datasets.CIFAR10('./cifardata/', train=False,transform=transforms.Compose([transforms.ToTensor(), normalize]))
+        cifar_test = datasets.CIFAR10('./cifardata/', train=False, download=True, transform=transforms.Compose([transforms.ToTensor(), normalize]))
 
     x,y = cifar_test[idx]
     x = x.unsqueeze(0)

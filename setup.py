@@ -23,7 +23,7 @@ setup(
         'Programming Language :: Python :: 3.6',
     ],
     packages=find_packages(),
-    install_requires=['sh', 'numpy', 'torch==0.4.1', 'scipy'],
+    install_requires=['sh', 'numpy', 'torch==1.0.0', "torchvision==0.2.1", 'scipy'],
     extras_require={
         'dev': ['ipython', 'ipdb']
     },
