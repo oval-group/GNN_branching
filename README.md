@@ -14,7 +14,7 @@ from [here](http://www.gurobi.com/academia/for-universities).
 * The ./plnn/ is developed on the original implementations of Branch and Bound methods, provided in the github package [PLNN_verification](https://github.com/oval-group/PLNN-verification). We have also directly used the MIPplanet solver provided in  [PLNN_verification](https://github.com/oval-group/PLNN-verification).
   
 ## Installation
-We recommend installing everything into a virtual environment. Depending on how you configure you environment, you may need to install a different version of pillow. Also, remember to modify your PYTHONPATH accordingly. 
+We recommend installing everything into a virtual environment. Depending on how you configure your environment, you may need to install a different version of pillow. Also, remember to modify your PYTHONPATH accordingly. 
 
 ```bash
 git clone --recursive http://github.com/oval-group/GNN_branching
