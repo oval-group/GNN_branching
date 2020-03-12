@@ -6,6 +6,7 @@ from torch import nn
 from plnn.kw_score_conv import choose_node_conv
 from graphnet.graph_score import GraphChoice
 import time
+import os
 
 '''
 this file mainly use gnn to make branching decision. 
@@ -14,7 +15,7 @@ When the improvemen done by gnn is less than a provided threshold, we switch to 
 NOTE: changed bab to assume that decision bound is definitely provided
 '''
 
-path = '/home/jodie/PLNN/PLNN-verification-private/cifar_exp_all/gnnkwthreshold/'
+path = './gnn_dump_files/'
 
 class ReLUDomain:
     '''
@@ -71,7 +72,9 @@ def relu_gnn(net, domain,  x, ball_eps, bounded, eps=1e-4, pgd_threshold = 1, sp
     Returns         : Lower bound and Upper bound on the global minimum,
                       as well as the point where the upper bound is achieved
     '''
-    
+    if not os.path.exists(path):
+        os.makedirs(path)
+
     if dump_trace is not None:
         f = open(path + dump_trace, 'w')
 
