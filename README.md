@@ -50,7 +50,8 @@ python setup.py install
 ./scripts/bab_mip.sh
 
 ```
-* Results are saved in pandas table as well in the newly created folder ./cifar_results/.
+* Results are saved in pandas table as well in a newly created folder ./cifar_results/.
+* GNN log files are saved in a newly created folder ./gnn_dump_files/.
 * For the wide and the deep model, please comment and uncomment out related parts in bab_mip.sh.
 * In our experiments, we run the same method for all properties then move to the next method instead of running all methods for a property then moving to the next property.
 
@@ -63,7 +64,7 @@ If you use this work in your research, please cite:
 @Article{Lu2019,
   author        = {Lu, Jingyue and Kumar, M Pawan},
   title        =  {Neural Network Branching for Neural Network Verification},
-  journal      = {},
-  year         = {2019},
+  journal      = {ICLR},
+  year         = {2020},
 }
 ```
