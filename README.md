@@ -20,8 +20,8 @@ We recommend installing everything into a virtual environment.
 git clone --recursive http://github.com/oval-group/GNN_branching
 
 cd GNN_branching
-virtualenv -p python3.6 ./gnn
-./gnn/bin/activate
+conda create --name gnn
+conda activate gnn
 
 # Install gurobipy to this virtualenv
 # (assuming your gurobi install is in /opt/gurobi801/linux64)
@@ -31,7 +31,8 @@ cd -
 
 # Install pytorch to this virtualenv
 # (check updated install instructions at http://pytorch.org)
-
+# For example:
+conda install pytorch torchvision cudatoolkit=9.2 -c pytorch
 
 # Install the code of this repository
 python setup.py install
