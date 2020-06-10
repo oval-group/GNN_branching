@@ -14,14 +14,14 @@ from [here](http://www.gurobi.com/academia/for-universities).
 * The ./plnn/ is developed on the original implementations of Branch and Bound methods, provided in the github package [PLNN_verification](https://github.com/oval-group/PLNN-verification). We have also directly used the MIPplanet solver provided in  [PLNN_verification](https://github.com/oval-group/PLNN-verification).
   
 ## Installation
-We recommend installing everything into a virtual environment.
+We recommend installing everything into a virtual environment. Depending on how you configure your environment, you may need to install a different version of pillow. Also, remember to modify your PYTHONPATH accordingly. 
 
 ```bash
 git clone --recursive http://github.com/oval-group/GNN_branching
 
 cd GNN_branching
-virtualenv -p python3.6 ./gnn
-./gnn/bin/activate
+conda create --name gnn
+conda activate gnn
 
 # Install gurobipy to this virtualenv
 # (assuming your gurobi install is in /opt/gurobi801/linux64)
@@ -31,7 +31,8 @@ cd -
 
 # Install pytorch to this virtualenv
 # (check updated install instructions at http://pytorch.org)
-
+# For example:
+conda install pytorch torchvision cudatoolkit=9.2 -c pytorch
 
 # Install the code of this repository
 python setup.py install
@@ -50,7 +51,8 @@ python setup.py install
 ./scripts/bab_mip.sh
 
 ```
-* Results are saved in pandas table as well in the newly created folder ./cifar_results/.
+* Results are saved in pandas table as well in a newly created folder ./cifar_results/.
+* GNN log files are saved in a newly created folder ./gnn_dump_files/.
 * For the wide and the deep model, please comment and uncomment out related parts in bab_mip.sh.
 * In our experiments, we run the same method for all properties then move to the next method instead of running all methods for a property then moving to the next property.
 
@@ -63,7 +65,7 @@ If you use this work in your research, please cite:
 @Article{Lu2019,
   author        = {Lu, Jingyue and Kumar, M Pawan},
   title        =  {Neural Network Branching for Neural Network Verification},
-  journal      = {},
-  year         = {2019},
+  journal      = {ICLR},
+  year         = {2020},
 }
 ```
