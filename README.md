@@ -1,6 +1,6 @@
 # Neural Network Branching for Neural Network Verification
 This repository contains all the code necessary to replicate the experiments
-reported in the paper: [Neural Network Branching for Neural Network Verification](). 
+reported in the paper: [Neural Network Branching for Neural Network Verification](https://openreview.net/pdf?id=B1evfa4tPB). 
 
 ## Dependences
 * This code should work for python >= 3.6 and pytorch >= 0.4.1.
