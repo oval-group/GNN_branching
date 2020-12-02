@@ -186,14 +186,14 @@ class DualReshape(DualLayer):
         if x is None: 
             return None
         shape = x.size()[:-len(self.in_f)] + self.out_f
-        return x.view(shape)
+        return x.reshape(shape)
 
     def T(self, *xs): 
         x = xs[-1]
         if x is None: 
             return None
         shape = x.size()[:-len(self.out_f)] + self.in_f
-        return x.view(shape)
+        return x.reshape(shape)
 
     def apply(self, dual_layer): 
         pass
